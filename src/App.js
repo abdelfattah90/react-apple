@@ -1,5 +1,13 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
 function App() {
-  return <h1 className='display-1'>In the name of of Allah the Merciful</h1>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App
