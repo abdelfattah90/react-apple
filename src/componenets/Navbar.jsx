@@ -22,34 +22,35 @@ const Navbar = (link) => {
           <img
             className='apple-logo d-lg-none'
             src={AppleLogo}
-            alt=''
+            alt='AppleLogo'
             width='30'
             height='24'
           />
 
           <i
-            className='bi bi-list apple-list d-lg-none'
+            className='bi bi-list list-icon d-lg-none'
             data-bs-toggle='collapse'
             data-bs-target='#navbarTogglerApple'
             aria-controls='navbarTogglerApple'
             aria-expanded='false'
-            aria-label='Toggle navigation'></i>
+            aria-label='Toggle navigation'
+          ></i>
           <div className='collapse navbar-collapse' id='navbarTogglerApple'>
-            <ul className='navbar-nav nav-apple'>
-              <li className='nav-item'>
-                <a className='nav-link' href='/'>
+            <ul className='navbar-nav mx-auto'>
+              <li className='d-none d-lg-block nav-item'>
+                <NavLink className='nav-link' to='/'>
                   <img
-                    className='d-none d-none d-lg-block'
+                    className=''
                     src={AppleLogo}
                     alt='AppleLogo'
                     width='30'
-                    height='24'
+                    height='22'
                   />
-                </a>
+                </NavLink>
               </li>
 
               {links.map((link) => (
-                <li key={link.id} className='nav-item'>
+                <li key={link.id} className='nav-item mt-1'>
                   <NavLink className='nav-link' to={link.url}>
                     {link.name}
                   </NavLink>
